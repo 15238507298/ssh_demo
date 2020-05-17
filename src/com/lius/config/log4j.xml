@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/"
+                     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                     xsi:schemaLocation="http://jakarta.apache.org/log4j/ ">
+
+    <appender name="filelog_appender"
+              class="org.apache.log4j.RollingFileAppender">
+        <!-- 设置File参数：日志输出文件名 -->
+        <param name="File" value="log/testlog4jxml_all.log"/>
+        <!-- 设置是否在重新启动服务时，在原有日志的基础添加新日志 -->
+        <param name="Append" value="true"/>
+        <!-- 设置文件大小 -->
+        <param name="MaxFileSize" value="1MB"/>
+        <!-- 设置文件备份 -->
+        <param name="MaxBackupIndex" value="10000"/>
+        <!-- 设置输出文件项目和格式 -->
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="%d{yyyy-MM-dd HH:mm:ss} %-5p (%c:%L)- %m%n"/>
+        </layout>
+    </appender>
+
+
+    <appender name="A2" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}][%C-%M]%m%n"/>
+        </layout>
+    </appender>
+
+    <logger name="com.lius.app.dao">
+        <level value="DEBUG"/>
+        <appender-ref ref="A1"/>
+    </logger>
+
+    <root>
+        <priority value="DEBUG"/>
+        <appender-ref ref="A2"/>
+    </root>
+
+</log4j:configuration>
