@@ -7,6 +7,6 @@
     <title>光影传媒</title>
 </head>
 <body>
-<h1>光影传媒<p>{s.request}</p></h1>
+<h1>光影传媒<p><s:property value="user.username" />登陆成功！</p></h1>
 </body>
 </html>
