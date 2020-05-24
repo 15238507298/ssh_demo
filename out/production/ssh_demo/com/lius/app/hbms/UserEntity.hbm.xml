@@ -1,0 +1,14 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="com.lius.app.beans.UserEntity" table="user" schema="ssh_data">
+        <id name="id" column="id" >
+            <generator class="identity" />
+        </id>
+        <property name="username" column="username"/>
+        <property name="userpassword" column="userpassword"/>
+    </class>
+</hibernate-mapping>

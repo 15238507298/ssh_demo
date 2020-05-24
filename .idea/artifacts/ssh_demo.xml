@@ -1,0 +1,20 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ssh_demo">
+    <output-path>$PROJECT_DIR$/out/artifacts/ssh_demo</output-path>
+    <root id="archive" name="ssh_demo.war">
+      <element id="javaee-facet-resources" facet="ssh_demo/web/Web" />
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="ssh_demo" />
+        </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="mysql-connector-java-5.1.37-bin" />
+          <element id="library" level="project" name="antlr-2.7.7" />
+          <element id="library" level="project" name="log4j-api-2.3" />
+          <element id="library" level="project" name="asm-3.3" />
+          <element id="library" level="project" name="commons-logging-1.2-javadoc" />
+        </element>
+      </element>
+    </root>
+  </artifact>
+</component>
